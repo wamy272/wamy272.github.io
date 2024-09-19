@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@unocss/reset':
+        specifier: ^0.62.4
+        version: 0.62.4
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -27,6 +30,12 @@ importers:
       '@unocss/eslint-config':
         specifier: ^0.62.4
         version: 0.62.4(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+      '@unocss/preset-uno':
+        specifier: ^0.62.4
+        version: 0.62.4
+      '@unocss/preset-web-fonts':
+        specifier: ^0.62.4
+        version: 0.62.4
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.6)

@@ -1,5 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Noto Sans SC", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -10,9 +11,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 #root {
   height: 100vh;
   width: 100vw;
+  overflow: auto;
+  scrollbar-gutter: stable both-edges;
 }
 
 body {
@@ -20,4 +29,21 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 12px;
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
