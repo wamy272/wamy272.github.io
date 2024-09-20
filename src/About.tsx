@@ -11,7 +11,7 @@ export const About = () => {
         <header className="section-header">About Me</header>
         <div className="section-content">
           <div className="image-placeholder section-content-start">Image</div>
-          <article className="article section-content-main">
+          <article className="section-content-main article">
             <p className="font-bold">Hi, I am Mingyan Wang! 👋</p>
             <p>
               I am a second year Master student in{" "}
@@ -31,10 +31,14 @@ export const About = () => {
               like gesture interactions, to enhance user experiences.
             </p>
             <footer className="section-footer">
-              <img src={cv} />
-              <img src={mail} />
+              <a href="/WANGMINGYAN.pdf" target="__blank" className="contents">
+                <img src={cv} />
+              </a>
+              <a href="mailto:wangmingyan@zju.edu.cn" className="contents">
+                <img src={mail} />
+              </a>
               <div>|</div>
-              <div className="flex flex-row gap-1">
+              <div className="flex flex-1 flex-row gap-1">
                 <img src={location} />
                 <div>Hangzhou, China</div>
               </div>
@@ -51,7 +55,7 @@ export const About = () => {
               <h1 className="academic-title">{paper.title}</h1>
               <p className="academic-journal">{paper.journal}</p>
               <p className="academic-authors">{paper.authors}</p>
-              <details className="academic-abstract group">
+              <details className="group academic-abstract">
                 <summary className="academic-abstract-summary">
                   Abstract
                   <div>|</div>

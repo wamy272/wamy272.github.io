@@ -4,7 +4,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -30,6 +29,12 @@ body {
   width: 100vw;
   margin: 0;
   overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
 }
 
 ::-webkit-scrollbar {

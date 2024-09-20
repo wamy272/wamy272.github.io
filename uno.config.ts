@@ -38,7 +38,7 @@ export default defineConfig({
     "section-header": "font-bold font-[Courier] my-4",
     "section-content": "flex flex-row gap-8 mb-4",
     "section-content-start": "flex-1",
-    "section-content-main": "flex-[3]",
+    "section-content-main": "flex-[3] text-justify",
     "section-footer": "color-gray flex flex-row gap-4",
     "image-placeholder":
       "flex place-items-center place-content-center bg-gray opacity-60 rounded-xl aspect-ratio-square color-white",
