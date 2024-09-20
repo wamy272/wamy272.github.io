@@ -33,14 +33,14 @@ export const Portfolio = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col gap-8 mt-8">
+      <div className="mt-8 flex flex-col gap-8">
         {projects.map((project) => (
           <div key={project.title}>
-            <h1 className="font-bold font-[Courier] text-size-[22px]">
+            <h1 className="text-size-[22px] font-bold font-[Courier]">
               {project.title}
             </h1>
             <p className="flex flex-row place-items-center text-size-[14px]">
-              <span className="flex flex-row mr-2">
+              <span className="mr-2 flex flex-row">
                 {project.lables.map((label) => (
                   <span
                     key={label}
@@ -50,7 +50,7 @@ export const Portfolio = () => {
               </span>
               {project.subtitle}
             </p>
-            <div className="image-placeholder aspect-ratio-[unset] mt-2 h-56" />
+            <div className="mt-2 aspect-ratio-[unset] image-placeholder h-56" />
           </div>
         ))}
       </div>

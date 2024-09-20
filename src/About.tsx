@@ -48,8 +48,8 @@ export const About = () => {
       </section>
       <section id="research" className="section">
         <header className="section-header">Research</header>
-        {papers.map((paper) => (
-          <div className="section-content">
+        {papers.map((paper, index) => (
+          <div key={index} className="section-content">
             <div className="image-placeholder section-content-start">Image</div>
             <article className="section-content-main academic">
               <h1 className="academic-title">{paper.title}</h1>
