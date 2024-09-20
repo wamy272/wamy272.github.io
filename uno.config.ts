@@ -22,6 +22,17 @@ export default defineConfig({
       },
     }),
   ],
+  theme: {
+    colors: {
+      design: {
+        product: "#6BC0F2",
+        service: "#F18D7B",
+        brand: "#F9E49A",
+        DEFAULT: "gray",
+      },
+    },
+  },
+  safelist: ["bg-design-product", "bg-design-service", "bg-design-brand"],
   shortcuts: {
     section: "w-full mb-8",
     "section-header": "font-bold font-[Courier] my-4",
@@ -30,7 +41,7 @@ export default defineConfig({
     "section-content-main": "flex-[3]",
     "section-footer": "color-gray flex flex-row gap-4",
     "image-placeholder":
-      "flex place-items-center place-content-center bg-blue rounded-xl aspect-ratio-square color-white",
+      "flex place-items-center place-content-center bg-gray opacity-60 rounded-xl aspect-ratio-square color-white",
     article: "text-size-[14px] space-y-4",
     "article-highlight":
       "bg-gradient-linear bg-gradient-[to_bottom,transparent_60%,#A5D6FF99_60%]",
