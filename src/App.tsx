@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div className="flex flex-row justify-center">
-      <div className="m-8 md:w-4xl">
+      <div className="m-8 w-full md:max-w-4xl">
         <div className="max-w-full flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
           <Link to="/">
             <h1 className="text-size-2xl font-bold">MINGYAN WANG | 汪铭彦</h1>
