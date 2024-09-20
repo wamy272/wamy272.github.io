@@ -3,10 +3,15 @@ import { designs, projects } from "./data";
 export const Portfolio = () => {
   return (
     <>
-      <div className="flex flex-row gap-6 text-size-[0.75rem]">
+      <div className="flex flex-row justify-between gap-3 text-size-[0.75rem] sm:justify-initial sm:gap-6">
         {Object.entries(designs).map(([key, name]) => (
-          <div key={key} className="flex flex-row place-items-center gap-2">
-            <span className={`block w-3 h-3 rounded-full bg-design-${key}`} />
+          <div
+            key={key}
+            className="flex flex-row place-items-center gap-1 sm:gap-2"
+          >
+            <span
+              className={`block w-3 min-w-3 h-3 rounded-full bg-design-${key}`}
+            />
             <label>{name}</label>
           </div>
         ))}
