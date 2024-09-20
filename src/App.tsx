@@ -50,7 +50,7 @@ const App = () => {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <footer className="flex flex-row justify-between py-8 text-size-[14px] opacity-60">
-          <div>© 2024 Created by WANG MINGYAN</div>
+          <div>© 2024 Created by MINGYAN WANG</div>
           <div>
             Last Updated:{" "}
             {import.meta.env.VITE_LAST_COMMIT_DATE?.trim() ??
