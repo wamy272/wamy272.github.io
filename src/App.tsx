@@ -3,6 +3,8 @@ import { clsx } from "clsx";
 import { About } from "./About";
 import { Portfolio } from "./Portfolio";
 import night from "./assets/night.svg";
+import sun from "./assets/sun.svg";
+import { useState } from "react";
 
 const links = [
   { name: "About", path: "/about" },
@@ -11,9 +13,14 @@ const links = [
 
 const App = () => {
   const { pathname } = useLocation();
+  const [isDark, setIsDark] = useState(() =>
+    document.body.classList.contains("dark")
+  );
 
   const toggleTheme = () => {
     const isDark = document.body.classList.toggle("dark");
+    setIsDark(isDark);
+
     const color = isDark ? "#1a1a1a" : "#ffffff";
 
     const meta = document.querySelector('meta[name="theme-color"]');
@@ -47,9 +54,9 @@ const App = () => {
               </Link>
             ))}
             <img
-              src={night}
+              src={isDark ? sun : night}
               onClick={toggleTheme}
-              className="cursor-pointer dark:invert"
+              className="cursor-pointer"
             />
           </div>
         </div>
