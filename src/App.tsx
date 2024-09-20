@@ -13,13 +13,24 @@ const App = () => {
   const { pathname } = useLocation();
 
   const toggleTheme = () => {
-    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.toggle("dark");
+    const color = isDark ? "#1a1a1a" : "#ffffff";
+
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute("content", color);
+    } else {
+      const newMeta = document.createElement("meta");
+      newMeta.setAttribute("name", "theme-color");
+      newMeta.setAttribute("content", color);
+      document.head.appendChild(newMeta);
+    }
   };
 
   return (
     <div className="flex flex-row justify-center">
-      <div className="w-4xl py-8">
-        <div className="flex flex-row items-center justify-between">
+      <div className="m-8 md:w-4xl">
+        <div className="max-w-full flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
           <Link to="/">
             <h1 className="text-size-2xl font-bold">MINGYAN WANG | 汪铭彦</h1>
           </Link>
@@ -49,7 +60,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <footer className="flex flex-row justify-between py-8 text-size-[14px] opacity-60">
+        <footer className="flex flex-col place-items-center justify-between gap-1 py-8 text-size-[14px] opacity-60 sm:flex-row sm:gap-0">
           <div>© 2024 Created by MINGYAN WANG</div>
           <div>
             Last Updated:{" "}

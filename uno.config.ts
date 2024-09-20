@@ -36,7 +36,7 @@ export default defineConfig({
   shortcuts: {
     section: "w-full mb-8",
     "section-header": "font-bold font-[Courier] my-4",
-    "section-content": "flex flex-row gap-8 mb-6",
+    "section-content": "flex flex-col gap-8 mb-6 sm:flex-row",
     "section-content-start": "flex-1",
     "section-content-main": "flex-[3] text-justify",
     "section-footer": "color-gray flex flex-row gap-4",
