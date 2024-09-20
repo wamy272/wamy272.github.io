@@ -1,3 +1,9 @@
+import cv from "./assets/cv.svg";
+import mail from "./assets/mail.svg";
+import location from "./assets/location.svg";
+import pdf from "./assets/pdf.svg";
+import { papers } from "./papers";
+
 const App = () => {
   return (
     <div className="flex flex-row justify-center">
@@ -11,16 +17,13 @@ const App = () => {
             <a href="#portfolio">PORTFOLIO</a>
           </div>
         </div>
-        <div className="w-full h-[1px] bg-blueGray mb-8 mt-4" />
-        <section id="about" className="w-full h-md">
-          <div className="section-title">About</div>
-          <div className="flex flex-row gap-8">
-            <div className="flex place-items-center place-content-center bg-blue rounded-xl h-[15rem] min-w-[15rem]">
-              Image
-            </div>
-            <article className="article">
+        <div className="w-full h-[1px] mb-8 mt-4 bg-gray" />
+        <section id="about" className="section">
+          <header className="section-header">About Me</header>
+          <div className="section-content">
+            <div className="image-placeholder section-content-start">Image</div>
+            <article className="article section-content-main">
               <p className="font-bold">Hi, I am Mingyan Wang! 👋</p>
-              <br />
               <p>
                 I am a second year Master student in{" "}
                 <span className="article-highlight">
@@ -29,9 +32,8 @@ const App = () => {
                 at{" "}
                 <span className="article-highlight">Zhejiang University</span>.
                 I’m working with Prof. Jinghua Huang at the International Design
-                Institude (IDI) of Zhejiang University.
+                Institute (IDI) of Zhejiang University.
               </p>
-              <br />
               <p>
                 My research investigates human behaviour in human-computer
                 interaction (HCI) using measures such as eye tracking and
@@ -41,11 +43,40 @@ const App = () => {
                 interfaces (NUIs) like gesture interactions, to enhance user
                 experiences.
               </p>
+              <footer className="section-footer">
+                <img src={cv} />
+                <img src={mail} />
+                <div>|</div>
+                <div className="flex flex-row gap-1">
+                  <img src={location} />
+                  <div>Hangzhou, China</div>
+                </div>
+              </footer>
             </article>
           </div>
         </section>
-        <section id="portfolio" className="w-full h-md">
-          <div className="section-title">Research</div>
+        <section id="research" className="section">
+          <header className="section-header">Research</header>
+          {papers.map((paper) => (
+            <div className="section-content">
+              <div className="image-placeholder section-content-start">
+                Image
+              </div>
+              <article className="section-content-main academic">
+                <h1 className="academic-title">{paper.title}</h1>
+                <p className="academic-journal">{paper.journal}</p>
+                <p className="academic-authors">{paper.authors}</p>
+                <details className="academic-abstract group">
+                  <summary className="academic-abstract-summary">
+                    Abstract
+                    <div>|</div>
+                    <img src={pdf} />
+                  </summary>
+                  <p>{paper.abstract}</p>
+                </details>
+              </article>
+            </div>
+          ))}
         </section>
       </div>
     </div>
