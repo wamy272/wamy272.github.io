@@ -33,6 +33,14 @@ body.dark {
   color: #f0f0f0;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::marker {
+  content: none;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
