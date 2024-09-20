@@ -20,7 +20,9 @@ const App = () => {
     <div className="flex flex-row justify-center">
       <div className="w-4xl py-8">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="text-size-2xl font-bold">MINGYAN WANG | 汪铭彦</h1>
+          <Link to="/">
+            <h1 className="text-size-2xl font-bold">MINGYAN WANG | 汪铭彦</h1>
+          </Link>
           <div className="flex flex-row gap-4">
             {links.map((nav) => (
               <Link
@@ -47,6 +49,18 @@ const App = () => {
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <footer className="my-8 flex flex-row justify-between text-size-[14px] opacity-60">
+          <div>© 2024 Created by WANG MINGYAN</div>
+          <div>
+            Last Updated:{" "}
+            {import.meta.env.VITE_LAST_COMMIT_DATE?.trim() ??
+              new Intl.DateTimeFormat("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              }).format(new Date())}
+          </div>
+        </footer>
       </div>
     </div>
   );
