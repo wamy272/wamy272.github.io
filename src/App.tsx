@@ -49,7 +49,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <footer className="my-8 flex flex-row justify-between text-size-[14px] opacity-60">
+        <footer className="flex flex-row justify-between py-8 text-size-[14px] opacity-60">
           <div>© 2024 Created by WANG MINGYAN</div>
           <div>
             Last Updated:{" "}

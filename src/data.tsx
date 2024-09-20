@@ -4,6 +4,7 @@ export type Paper = {
   title: ReactNode;
   journal: ReactNode;
   authors: ReactNode;
+  image: string;
   abstract: ReactNode;
 };
 
@@ -24,6 +25,7 @@ export const papers: Paper[] = [
         Dongliang Zhang, Mengyao Qi & Miaomiao Ke
       </>
     ),
+    image: "/images/R1.jpg",
     abstract: (
       <>
         Evidence shows that visual properties of on-screen objects determine
@@ -60,6 +62,7 @@ export const papers: Paper[] = [
         Zhang, Yi Zhou, Lujin Mao & Mengyao Qi
       </>
     ),
+    image: "/images/R2.jpg",
     abstract: (
       <>
         Evidence indicated that emojis could influence sarcasm comprehension and
@@ -81,3 +84,27 @@ export const papers: Paper[] = [
     ),
   },
 ];
+
+export const designs = {
+  product: "Product Design",
+  service: "Service Design",
+  brand: "Brand Design",
+} as const;
+
+export const projects = [
+  {
+    title: "Hi! Air",
+    subtitle: "Pneumatic Toy Design for Children",
+    lables: ["service", "product"],
+  },
+  {
+    title: "Crafted Seasons",
+    subtitle: "",
+    lables: ["service", "product"],
+  },
+  {
+    title: "Rebrella",
+    subtitle: "",
+    lables: ["service", "brand"],
+  },
+] as const;

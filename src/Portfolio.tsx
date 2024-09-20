@@ -1,32 +1,10 @@
-const lables = {
-  product: "Product Design",
-  service: "Service Design",
-  brand: "Brand Design",
-} as const;
-
-const projects = [
-  {
-    title: "Hi! Air",
-    subtitle: "Pneumatic Toy Design for Children",
-    lables: ["service", "product"],
-  },
-  {
-    title: "Crafted Seasons",
-    subtitle: "",
-    lables: ["service", "product"],
-  },
-  {
-    title: "Rebrella",
-    subtitle: "",
-    lables: ["service", "brand"],
-  },
-] as const;
+import { designs, projects } from "./data";
 
 export const Portfolio = () => {
   return (
     <>
       <div className="flex flex-row gap-6 text-size-[0.75rem]">
-        {Object.entries(lables).map(([key, name]) => (
+        {Object.entries(designs).map(([key, name]) => (
           <div key={key} className="flex flex-row place-items-center gap-2">
             <span className={`block w-3 h-3 rounded-full bg-design-${key}`} />
             <label>{name}</label>

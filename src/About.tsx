@@ -2,7 +2,7 @@ import cv from "./assets/cv.svg";
 import mail from "./assets/mail.svg";
 import location from "./assets/location.svg";
 import pdf from "./assets/pdf.svg";
-import { papers } from "./papers";
+import { papers } from "./data";
 
 export const About = () => {
   return (
@@ -52,7 +52,9 @@ export const About = () => {
         <header className="section-header">Research</header>
         {papers.map((paper, index) => (
           <div key={index} className="section-content">
-            <div className="image-placeholder section-content-start">Image</div>
+            <div className="section-content-start">
+              <img src={paper.image} className="image" />
+            </div>
             <article className="section-content-main academic">
               <h1 className="academic-title">{paper.title}</h1>
               <p className="academic-journal">{paper.journal}</p>
