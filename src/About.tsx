@@ -10,7 +10,9 @@ export const About = () => {
       <section id="about" className="section">
         <header className="section-header">About Me</header>
         <div className="section-content">
-          <div className="image-placeholder section-content-start">Image</div>
+          <div className="section-content-start">
+            <img src="/WANGMINGYAN.jpg" className="image" />
+          </div>
           <article className="section-content-main article">
             <p className="font-bold">Hi, I am Mingyan Wang! 👋</p>
             <p>

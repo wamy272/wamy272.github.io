@@ -41,7 +41,8 @@ export default defineConfig({
     "section-content-main": "flex-[3] text-justify",
     "section-footer": "color-gray flex flex-row gap-4",
     "image-placeholder":
-      "flex place-items-center place-content-center bg-gray opacity-60 rounded-xl aspect-ratio-square color-white",
+      "flex place-items-center place-content-center bg-gray opacity-60 rounded-xl aspect-ratio-square color-white shadow-md",
+    image: "rounded-xl shadow-md",
     article: "text-size-[14px] space-y-4",
     "article-highlight":
       "bg-gradient-linear bg-gradient-[to_bottom,transparent_60%,#A5D6FF99_60%]",
