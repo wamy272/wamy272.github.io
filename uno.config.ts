@@ -35,7 +35,7 @@ export default defineConfig({
   safelist: ["bg-design-product", "bg-design-service", "bg-design-brand"],
   shortcuts: {
     section: "w-full mb-8",
-    "section-header": "font-bold font-[Courier] my-4",
+    "section-header": "font-bold font-[Courier] mb-3 text-size-lg",
     "section-content": "flex flex-col gap-8 mb-6 sm:flex-row",
     "section-content-start": "flex-1",
     "section-content-main": "flex-[3] text-justify",

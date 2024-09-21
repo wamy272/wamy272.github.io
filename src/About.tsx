@@ -42,7 +42,7 @@ const Abstract: FC<{ paper: Paper }> = ({ paper }) => {
 
 export const About = () => {
   return (
-    <>
+    <div className="flex flex-col">
       <section id="about" className="section">
         <header className="section-header">About Me</header>
         <div className="section-content">
@@ -110,6 +110,6 @@ export const About = () => {
           <Abstract key={index} paper={paper} />
         ))}
       </section>
-    </>
+    </div>
   );
 };
