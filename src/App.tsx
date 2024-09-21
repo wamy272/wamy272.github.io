@@ -71,7 +71,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <footer className="flex flex-col place-items-center justify-between gap-1 py-8 text-size-[14px] opacity-60 sm:flex-row sm:gap-0">
+        <footer className="flex flex-col place-items-center justify-between gap-1 pb-8 pt-16 text-size-[14px] opacity-60 sm:flex-row sm:gap-0">
           <div>© 2024 Created by MINGYAN WANG</div>
           <div>
             Last Updated:{" "}
