@@ -47,7 +47,11 @@ const App = () => {
                 key={nav.path}
                 to={nav.path}
                 className={clsx("uppercase", {
-                  "font-bold underline": pathname === nav.path,
+                  "font-medium": pathname === nav.path,
+                  "relative underline-none after:content-empty after:absolute after:left-0 after:bottom-0.5 after:w-full after:h-0.25 after:bg-black dark:after:bg-white after:transform after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left":
+                    true,
+                  "after:duration-0 after:scale-x-100 after:origin-bottom-left":
+                    pathname === nav.path,
                 })}
               >
                 {nav.name}

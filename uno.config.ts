@@ -11,12 +11,12 @@ export default defineConfig({
         sans: [
           {
             name: "Open Sans",
-            weights: [400, 700],
+            weights: [400, 500, 700],
             italic: true,
           },
           {
             name: "Noto Sans SC",
-            weights: [400, 700],
+            weights: [400, 500, 700],
           },
         ],
       },
@@ -39,19 +39,20 @@ export default defineConfig({
     "section-content": "flex flex-col gap-8 mb-6 sm:flex-row",
     "section-content-start": "flex-1",
     "section-content-main": "flex-[3] text-justify",
-    "section-footer": "color-gray flex flex-row gap-4",
+    "section-footer": "text-[#888888] flex flex-row gap-4",
     "image-placeholder":
       "flex place-items-center place-content-center bg-gray opacity-60 aspect-ratio-square color-white shadow-md",
     image: "shadow-md",
+    icon: "transition hover:color-[#7FAFC7]",
     article: "text-size-[14px] space-y-4",
     "article-highlight":
-      "bg-gradient-linear bg-gradient-[to_bottom,transparent_60%,#A5D6FF99_60%]",
+      "bg-gradient-linear bg-gradient-[to_bottom,transparent_60%,#A5D6FF99_60%] transition-[all] hover:bg-gradient-[to_bottom,transparent_60%,#A5D6FFFF_60%]",
     academic: "text-size-[14px] space-y-1",
     "academic-title": "font-bold",
     "academic-journal": "font-italic",
     "academic-authors": "break-words",
     "academic-abstract-summary":
-      "flex flex-row cursor-pointer gap-1 font-normal group-open:font-bold select-none",
-    "academic-abstract": "opacity-60",
+      "flex flex-row gap-2 font-normal select-none place-items-center",
+    "academic-abstract": "text-[#888888]",
   },
 });

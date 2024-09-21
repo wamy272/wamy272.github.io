@@ -1,8 +1,44 @@
-import cv from "./assets/cv.svg";
-import mail from "./assets/mail.svg";
-import location from "./assets/location.svg";
+import CV from "./assets/cv.svg?react";
+import Mail from "./assets/mail.svg?react";
+import Location from "./assets/location.svg?react";
 import pdf from "./assets/pdf.svg";
-import { papers } from "./data";
+import { Paper, papers } from "./data";
+import { FC, useState } from "react";
+import clsx from "clsx";
+
+const Abstract: FC<{ paper: Paper }> = ({ paper }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="section-content">
+      <div className="section-content-start">
+        <img src={paper.image} className="image" />
+      </div>
+      <article className="section-content-main academic">
+        <h1 className="academic-title">{paper.title}</h1>
+        <p className="academic-journal">{paper.journal}</p>
+        <p className="academic-authors">{paper.authors}</p>
+        <div className="academic-abstract">
+          <div className="academic-abstract-summary">
+            <span
+              className={clsx("cursor-pointer", {
+                "font-medium underline": isOpen,
+              })}
+              onClick={() => setIsOpen((value) => !value)}
+            >
+              Abstract
+            </span>
+            <div>|</div>
+            <img src={pdf} className="cursor-pointer" />
+          </div>
+          <p className={clsx("overflow-hidden", isOpen ? "h-fit" : "h-0")}>
+            {paper.abstract}
+          </p>
+        </div>
+      </article>
+    </div>
+  );
+};
 
 export const About = () => {
   return (
@@ -17,12 +53,30 @@ export const About = () => {
             <p className="font-bold">Hi, I am Mingyan Wang! 👋</p>
             <p>
               I am a second year Master student in{" "}
-              <span className="article-highlight">
+              <a
+                href="http://www.cst.zju.edu.cn/"
+                target="__blank"
+                className="article-highlight"
+              >
                 the school of Software Technology
-              </span>{" "}
-              at <span className="article-highlight">Zhejiang University</span>.
-              I’m working with Prof. Jinghua Huang at the International Design
-              Institute (IDI) of Zhejiang University.
+              </a>{" "}
+              at{" "}
+              <a
+                href="https://www.zju.edu.cn/"
+                target="__blank"
+                className="article-highlight"
+              >
+                Zhejiang University
+              </a>
+              . I’m working with Prof. Jinghua Huang at the{" "}
+              <a
+                href="http://www.idi.zju.edu.cn/"
+                target="__blank"
+                className="article-highlight"
+              >
+                International Design Institute (IDI)
+              </a>{" "}
+              of Zhejiang University.
             </p>
             <p>
               My research investigates human behaviour in human-computer
@@ -33,17 +87,19 @@ export const About = () => {
               like gesture interactions, to enhance user experiences.
             </p>
             <footer className="section-footer">
-              <a href="/WANGMINGYAN.pdf" target="__blank" className="contents">
-                <img src={cv} />
+              <a href="/WANGMINGYAN.pdf" target="__blank">
+                <CV className="icon" />
               </a>
-              <a href="mailto:wangmingyan@zju.edu.cn" className="contents">
-                <img src={mail} />
+              <a href="mailto:wangmingyan@zju.edu.cn">
+                <Mail className="icon" />
               </a>
               <div>|</div>
-              <div className="flex flex-1 flex-row gap-1">
-                <img src={location} />
-                <div>Hangzhou, China</div>
-              </div>
+              <a>
+                <div className="flex flex-1 flex-row items-center gap-1">
+                  <Location />
+                  <div className="text-[#888888]">Hangzhou, China</div>
+                </div>
+              </a>
             </footer>
           </article>
         </div>
@@ -51,24 +107,7 @@ export const About = () => {
       <section id="research" className="section">
         <header className="section-header">Research</header>
         {papers.map((paper, index) => (
-          <div key={index} className="section-content">
-            <div className="section-content-start">
-              <img src={paper.image} className="image" />
-            </div>
-            <article className="section-content-main academic">
-              <h1 className="academic-title">{paper.title}</h1>
-              <p className="academic-journal">{paper.journal}</p>
-              <p className="academic-authors">{paper.authors}</p>
-              <details className="group academic-abstract">
-                <summary className="academic-abstract-summary">
-                  Abstract
-                  <div>|</div>
-                  <img src={pdf} />
-                </summary>
-                <p>{paper.abstract}</p>
-              </details>
-            </article>
-          </div>
+          <Abstract key={index} paper={paper} />
         ))}
       </section>
     </>
