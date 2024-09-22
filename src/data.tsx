@@ -113,9 +113,9 @@ export const projects = [
   },
   {
     title: "Rebrella",
-    subtitle: "",
+    subtitle: "2021 BRIDGE - Sustainable Design Action Project",
     labels: ["service", "brand"],
-    url: null,
-    image: null,
+    url: "/portfolio/rebrella",
+    image: "/images/D3.png",
   },
 ] as const;

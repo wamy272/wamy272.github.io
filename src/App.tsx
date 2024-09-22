@@ -7,6 +7,7 @@ import sun from "./assets/sun.svg";
 import { useState } from "react";
 import { HiAir } from "./Portfolios/HiAir";
 import { CraftedSeasons } from "./Portfolios/CraftedSeasons";
+import { Rebrella } from "./Portfolios/Rebrella";
 
 const links = [
   { name: "About", path: "/about" },
@@ -75,6 +76,7 @@ const App = () => {
             path="/portfolio/crafted_seasons"
             element={<CraftedSeasons />}
           />
+          <Route path="/portfolio/rebrella" element={<Rebrella />} />
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
