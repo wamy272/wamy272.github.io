@@ -65,7 +65,7 @@ const App = () => {
             />
           </div>
         </div>
-        <div className="mb-8 mt-4 h-[1px] w-full bg-gray" />
+        <div className="mb-8 mt-4 h-[1px] w-full bg-[#D9D9D9]" />
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />

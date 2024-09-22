@@ -46,7 +46,7 @@ export default defineConfig({
     icon: "transition hover:color-[#7FAFC7]",
     article: "text-size-[14px] space-y-4",
     "article-highlight":
-      "shadow-[inset_0_-0.4rem_0_#A5D6FF66] hover:shadow-[inset_0_-0.5rem_0_#A5D6FFFF] transition-all transition-duration-300",
+      "shadow-[inset_0_-0.4rem_0_#A5D6FF66] hover:shadow-[inset_0_-0.5rem_0_#A5D6FFFF] transition-[box-shadow] transition-duration-300",
     academic: "text-size-[14px] space-y-1",
     "academic-title": "font-bold",
     "academic-journal": "font-italic",

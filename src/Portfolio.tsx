@@ -21,16 +21,15 @@ export const Portfolio = () => {
       </div>
       <div className="mt-8 flex flex-col gap-8">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="cursor-pointer select-none transition-all hover:shadow-2xl"
-            onClick={() => {
-              if (project.url) {
-                navigate(project.url);
-              }
-            }}
-          >
-            <h1 className="text-size-[22px] font-bold font-[Courier]">
+          <div key={index} className="select-none">
+            <h1
+              className="w-fit cursor-pointer text-size-[22px] font-bold font-[Courier] hover:underline"
+              onClick={() => {
+                if (project.url) {
+                  navigate(project.url);
+                }
+              }}
+            >
               {project.title}
             </h1>
             <p className="flex flex-row place-items-center text-size-[14px]">
@@ -45,7 +44,15 @@ export const Portfolio = () => {
               {project.subtitle}
             </p>
             {project.image ? (
-              <img src={project.image} className="image" />
+              <img
+                src={project.image}
+                className="cursor-pointer image transition-[box-shadow] hover:shadow-xl"
+                onClick={() => {
+                  if (project.url) {
+                    navigate(project.url);
+                  }
+                }}
+              />
             ) : (
               <div className="mt-2 aspect-ratio-[unset] image-placeholder h-56" />
             )}
