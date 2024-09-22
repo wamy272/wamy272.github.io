@@ -1,6 +1,6 @@
 export const HiAir = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <img src="/images/hi_air/1.png" />
       <img src="/images/hi_air/2.png" />
       <img src="/images/hi_air/3.png" />

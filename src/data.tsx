@@ -105,10 +105,11 @@ export const projects = [
   },
   {
     title: "Crafted Seasons",
-    subtitle: "",
+    subtitle:
+      "2024 SDI-A Project - Service Design to Reflect MUJI's Values and Promote the Sumida Area",
     labels: ["service", "product"],
-    url: null,
-    image: null,
+    url: "/portfolio/crafted_seasons",
+    image: "/images/D2.png",
   },
   {
     title: "Rebrella",

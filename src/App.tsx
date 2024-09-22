@@ -6,6 +6,7 @@ import night from "./assets/night.svg";
 import sun from "./assets/sun.svg";
 import { useState } from "react";
 import { HiAir } from "./Portfolios/HiAir";
+import { CraftedSeasons } from "./Portfolios/CraftedSeasons";
 
 const links = [
   { name: "About", path: "/about" },
@@ -70,6 +71,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/hi_air" element={<HiAir />} />
+          <Route
+            path="/portfolio/crafted_seasons"
+            element={<CraftedSeasons />}
+          />
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
