@@ -99,16 +99,22 @@ export const projects = [
   {
     title: "Hi! Air",
     subtitle: "Pneumatic Toy Design for Children",
-    lables: ["service", "product"],
+    labels: ["service", "product"],
+    url: "/portfolio/hi_air",
+    image: "/images/D1.png",
   },
   {
     title: "Crafted Seasons",
     subtitle: "",
-    lables: ["service", "product"],
+    labels: ["service", "product"],
+    url: null,
+    image: null,
   },
   {
     title: "Rebrella",
     subtitle: "",
-    lables: ["service", "brand"],
+    labels: ["service", "brand"],
+    url: null,
+    image: null,
   },
 ] as const;
