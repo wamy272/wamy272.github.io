@@ -6,6 +6,7 @@ export type Paper = {
   authors: ReactNode;
   image: string;
   url?: string;
+  doc?: string;
   abstract: ReactNode;
 };
 
@@ -64,6 +65,7 @@ export const papers: Paper[] = [
       </>
     ),
     image: "/images/R2.jpg",
+    doc: "/docs/R2.pdf",
     url: "https://www.tandfonline.com/doi/full/10.1080/00140139.2024.2325534",
     abstract: (
       <>

@@ -12,10 +12,19 @@ const PaperCard: FC<{ paper: Paper }> = ({ paper }) => {
   return (
     <div className="section-content">
       <a className="section-content-start" href={paper.url} target="_blank">
-        <img src={paper.image} className="image" />
+        <img
+          src={paper.image}
+          className={clsx("image transition transition-duration-300", {
+            "hover:brightness-75": !!paper.url,
+          })}
+        />
       </a>
       <article className="section-content-main academic">
-        <h1 className="academic-title">
+        <h1
+          className={clsx("academic-title", {
+            "hover:underline": !!paper.url,
+          })}
+        >
           <a href={paper.url} target="_blank">
             {paper.title}
           </a>
@@ -32,8 +41,14 @@ const PaperCard: FC<{ paper: Paper }> = ({ paper }) => {
             >
               Abstract
             </span>
-            <div>|</div>
-            <img src={pdf} className="cursor-pointer" />
+            {paper.doc && (
+              <>
+                <div>|</div>
+                <a href={paper.doc} target="_blank">
+                  <img src={pdf} className="cursor-pointer" />
+                </a>
+              </>
+            )}
           </div>
           <p className={clsx("overflow-hidden", isOpen ? "h-fit" : "h-0")}>
             {paper.abstract}
