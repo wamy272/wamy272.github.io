@@ -6,16 +6,20 @@ import { Paper, papers } from "./data";
 import { FC, useState } from "react";
 import clsx from "clsx";
 
-const Abstract: FC<{ paper: Paper }> = ({ paper }) => {
+const PaperCard: FC<{ paper: Paper }> = ({ paper }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="section-content">
-      <div className="section-content-start">
+      <a className="section-content-start" href={paper.url} target="_blank">
         <img src={paper.image} className="image" />
-      </div>
+      </a>
       <article className="section-content-main academic">
-        <h1 className="academic-title">{paper.title}</h1>
+        <h1 className="academic-title">
+          <a href={paper.url} target="_blank">
+            {paper.title}
+          </a>
+        </h1>
         <p className="academic-journal">{paper.journal}</p>
         <p className="academic-authors">{paper.authors}</p>
         <div className="academic-abstract">
@@ -55,7 +59,7 @@ export const About = () => {
               I am a second year Master student in{" "}
               <a
                 href="http://www.cst.zju.edu.cn/"
-                target="__blank"
+                target="_blank"
                 className="article-highlight"
               >
                 the school of Software Technology
@@ -63,7 +67,7 @@ export const About = () => {
               at{" "}
               <a
                 href="https://www.zju.edu.cn/"
-                target="__blank"
+                target="_blank"
                 className="article-highlight"
               >
                 Zhejiang University
@@ -71,7 +75,7 @@ export const About = () => {
               . I’m working with Prof. Jinghua Huang at the{" "}
               <a
                 href="http://www.idi.zju.edu.cn/"
-                target="__blank"
+                target="_blank"
                 className="article-highlight"
               >
                 International Design Institute (IDI)
@@ -87,7 +91,7 @@ export const About = () => {
               like gesture interactions, to enhance user experiences.
             </p>
             <footer className="section-footer">
-              <a href="/WANGMINGYAN.pdf" target="__blank">
+              <a href="/WANGMINGYAN.pdf" target="_blank">
                 <CV className="icon" />
               </a>
               <a href="mailto:wangmingyan@zju.edu.cn">
@@ -107,7 +111,7 @@ export const About = () => {
       <section id="research" className="section">
         <header className="section-header">Research</header>
         {papers.map((paper, index) => (
-          <Abstract key={index} paper={paper} />
+          <PaperCard key={index} paper={paper} />
         ))}
       </section>
     </div>

@@ -45,7 +45,8 @@ export default defineConfig({
     image: "shadow-md",
     icon: "transition hover:color-[#7FAFC7]",
     article: "text-size-[14px] space-y-4",
-    "article-highlight": "relative hover:[--highlight-color:#A5D6FFFF] [--highlight-color:#A5D6FF99] before:bg-[--highlight-color] before:content-empty before:w-full before:h-[40%] before:bottom-0 before:absolute before:z--1 before:transition before:transition-duration-300",
+    "article-highlight":
+      "shadow-[inset_0_-0.4rem_0_#A5D6FF66] hover:shadow-[inset_0_-0.5rem_0_#A5D6FFFF] transition-all transition-duration-300",
     academic: "text-size-[14px] space-y-1",
     "academic-title": "font-bold",
     "academic-journal": "font-italic",

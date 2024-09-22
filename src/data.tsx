@@ -5,6 +5,7 @@ export type Paper = {
   journal: ReactNode;
   authors: ReactNode;
   image: string;
+  url?: string;
   abstract: ReactNode;
 };
 
@@ -63,6 +64,7 @@ export const papers: Paper[] = [
       </>
     ),
     image: "/images/R2.jpg",
+    url: "https://www.tandfonline.com/doi/full/10.1080/00140139.2024.2325534",
     abstract: (
       <>
         Evidence indicated that emojis could influence sarcasm comprehension and
