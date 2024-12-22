@@ -14,12 +14,12 @@ export const papers: Paper[] = [
   {
     title: (
       <>
-        The Effect of User-defined Mid-air Gestures Elicited by On-screen Visual
+        The Effect of User-Defined Mid-Air Gestures Elicited by On-Screen Visual
         Properties on Human Biomechanics, Behaviour, and Perception
       </>
     ),
     journal: (
-      <>International Journal of Human-Computer Interaction, Under Review</>
+      <>International Journal of Human-Computer Interaction, Accepted</>
     ),
     authors: (
       <>
