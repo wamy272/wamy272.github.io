@@ -99,7 +99,7 @@ export const papers: Paper[] = [
     authors: (
       <>
         Xini Wu, Zhuoyi Cheng, Zihao Wang, Xuan Duan,{" "}
-        <strong>Mingyan Wang*</strong>, Yuge Qi & Ning Zou
+        <strong>Mingyan Wang</strong>, Yuge Qi & Ning Zou*
       </>
     ),
     image: "/images/R3.jpg",
