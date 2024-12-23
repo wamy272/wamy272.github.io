@@ -71,7 +71,7 @@ export const About = () => {
           <article className="section-content-main article">
             <p className="font-bold">Hi, I am Mingyan Wang! 👋</p>
             <p>
-              I am a second year Master student in{" "}
+              I am a final year Master student in{" "}
               <a
                 href="http://www.cst.zju.edu.cn/"
                 target="_blank"
@@ -99,11 +99,11 @@ export const About = () => {
             </p>
             <p>
               My research investigates human behaviour in human-computer
-              interaction (HCI) using measures such as eye tracking and
+              interaction (HCI) using bio-measures such as eye tracking and
               electromyography. I am interested in human factors and ergonomics
               within HCI, focusing on designing and evaluating innovative
               interaction modalities, including natural user interfaces (NUIs)
-              like gesture interactions, to enhance user experiences.
+              like gesture interactions, to enhance user experience.
             </p>
             <footer className="section-footer">
               <a href="/WANGMINGYAN.pdf" target="_blank">
