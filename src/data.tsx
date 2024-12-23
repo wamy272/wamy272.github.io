@@ -88,7 +88,9 @@ export const papers: Paper[] = [
   },
   {
     title: (
-      <>EcoSprout: A Smart Modular Toy for EngagingChildren in AFNR Education</>
+      <>
+        EcoSprout: A Smart Modular Toy for Engaging Children in AFNR Education
+      </>
     ),
     journal: (
       <>
