@@ -18,9 +18,7 @@ export const papers: Paper[] = [
         Properties on Human Biomechanics, Behaviour, and Perception
       </>
     ),
-    journal: (
-      <>International Journal of Human-Computer Interaction, Accepted</>
-    ),
+    journal: <>International Journal of Human-Computer Interaction, Accepted</>,
     authors: (
       <>
         Jinghua Huang, <strong>Mingyan Wang*</strong>, Lujin Mao, Ruobiao Wang,
@@ -85,6 +83,38 @@ export const papers: Paper[] = [
         times on sarcastic words compared to literal words in the critical area
         of interest. Our findings suggested that the comment-final emoji was the
         preferable choice for avoiding semantic comprehension bias in China.
+      </>
+    ),
+  },
+  {
+    title: (
+      <>EcoSprout: A Smart Modular Toy for EngagingChildren in AFNR Education</>
+    ),
+    journal: (
+      <>
+        2024 17th International Symposium on Computational Intelligence and
+        Design (ISCID 2024)
+      </>
+    ),
+    authors: (
+      <>
+        Xini Wu, Zhuoyi Cheng, Zihao Wang, Xuan Duan,{" "}
+        <strong>Mingyan Wang*</strong>, Yuge Qi & Ning Zou
+      </>
+    ),
+    image: "/images/R3.jpg",
+    doc: "/docs/R3.pdf",
+    abstract: (
+      <>
+        In an era of rapid industrialization, the link between agriculture and
+        children has diminished significantly. EcoSprout is a smart modular toy
+        that teaches children the concepts of agricultural cycles and resource
+        management through activity-based games. It helps them gain important
+        agricultural knowledge while simulating real-life farming activities and
+        stimulates logical thinking. Our user study results show that this
+        interactive learning methodology significantly increases the engagement
+        and comprehension of key agricultural concepts in children, thus
+        sparking their interest in nature and agriculture.
       </>
     ),
   },
