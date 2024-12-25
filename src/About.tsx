@@ -99,7 +99,7 @@ export const About = () => {
             </p>
             <p>
               My research investigates human behaviour in human-computer
-              interaction (HCI) using bio-measures such as eye tracking and
+              interaction (HCI) using biometrics such as eye tracking and
               electromyography. I am interested in human factors and ergonomics
               within HCI, focusing on designing and evaluating innovative
               interaction modalities, including natural user interfaces (NUIs)
