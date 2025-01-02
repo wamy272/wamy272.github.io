@@ -18,7 +18,12 @@ export const papers: Paper[] = [
         Properties on Human Biomechanics, Behaviour, and Perception
       </>
     ),
-    journal: <>International Journal of Human-Computer Interaction, Accepted</>,
+    journal: (
+      <>
+        International Journal of Human-Computer Interaction, Published 02 Jan
+        2025
+      </>
+    ),
     authors: (
       <>
         Jinghua Huang, <strong>Mingyan Wang*</strong>, Lujin Mao, Ruobiao Wang,
