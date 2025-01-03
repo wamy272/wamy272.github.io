@@ -32,6 +32,7 @@ export const papers: Paper[] = [
     ),
     image: "/images/R1.jpg",
     doc: "/docs/R1.pdf",
+    url: "https://www.tandfonline.com/doi/full/10.1080/10447318.2024.2443243",
     abstract: (
       <>
         Evidence shows that visual properties of on-screen objects determine
